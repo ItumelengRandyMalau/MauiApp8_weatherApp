@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp8_weatherApp.NewPage1"
+             Title="Welcome to Weather Forecast" BackgroundColor="AliceBlue">
+    <Label Text="type the location and search for weather" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+</ContentPage>
