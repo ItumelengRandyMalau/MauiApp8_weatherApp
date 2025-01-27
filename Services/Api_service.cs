@@ -10,11 +10,11 @@ namespace MauiApp8_weatherApp.Services
 {
     public static class Api_service
     {
-        public  static async Task<Root> GetApi(double latitude, double longitude)
+        public  static async Task<Root> GetApi(double latitude, double longitude, int key)
         {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?lat={0}&lon={1}&appid=fe4dc6647614e4527e4214210013baa3", latitude, longitude));
-            return JsonConvert.DeserializeObject<Root>(response); 
+            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?lat={0}&lon={1}&appid={3}", latitude, longitude, key));
+            return JsonConvert.DeserializeObject<Root>(response);
         }
         public static async Task<Root> GetWeatherByCity(string city)
         {
