@@ -19,7 +19,7 @@ namespace MauiApp8_weatherApp.Services
         public static async Task<Root> GetWeatherByCity(string city)
         {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetStringAsync(string.Format("api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&appid=f2de4bda98a8aa42055ac068ff0e6876", city));
+            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&appid=f2de4bda98a8aa42055ac068ff0e6876", city));
             return JsonConvert.DeserializeObject<Root>(response);
         }
     }

@@ -12,7 +12,7 @@
             }
             else
             {
-                MainPage = new NewPage1();
+                MainPage = new NewPage2();
             }
         }
     }

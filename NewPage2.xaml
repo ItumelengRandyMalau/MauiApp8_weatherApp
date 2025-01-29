@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp8_weatherApp.NewPage2"
+             Title="NewPage2"
+             BackgroundColor="SkyBlue">
+    <StackLayout VerticalOptions="Center"
+                 Margin="20"
+                 Spacing="0">
+        <Image Source="icon_13d"
+               HeightRequest="300"
+               WidthRequest="300"/>
+        <Label Text="Weather"
+               FontSize="40"
+               TextColor="Cornsilk"/>
+        <Label Text=" Forcast App."
+               FontSize="40"
+               TextColor="WhiteSmoke"/>
+        <Label Text="Get your current weather"
+               TextColor="WhiteSmoke"
+               FontSize="Small"/>
+        <Button Text=" Get Started"
+                FontSize="Large"
+                BackgroundColor="Gold"
+                WidthRequest="250"
+                Margin="0,50,0,0"
+                x:Name="GetStartedButton"
+                Clicked="GetStartedButton_Clicked"/>
+
+
+    </StackLayout>
+</ContentPage>
