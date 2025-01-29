@@ -46,8 +46,28 @@ public partial class NewPage1 : ContentPage
 	public async Task GetWeatherDataByLocation(double latitude, double longitude)
 	{
         var result = await Api_service.GetApi(latitude, longitude);
+        //await GetWeatherDataByLocation(latitude, longitude);
+        UpdateUi(result);
+    }
+
+    private async void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        var response = await DisplayPromptAsync(title: "", message: "", placeholder: "Search weather by city", accept: "Search", cancel: "Cancel");
+        if (response != null) 
+        {
+           await GetweatherDataByCityName(response);
+        }
+    }
 
 
+    public async Task GetweatherDataByCityName(string city)
+    {
+        var result = await Api_service.GetWeatherByCity(city);
+        UpdateUi(result);
+    }
+
+    public void UpdateUi(dynamic result)
+    {
         //looping through the list of hourly weather forcast consumed by the API call stored in result var
         foreach (var item in result.list)
         {

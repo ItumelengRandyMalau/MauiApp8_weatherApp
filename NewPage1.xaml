@@ -20,7 +20,11 @@
 
                 </Frame.GestureRecognizers>
                 </Frame>
-            <ImageButton Source="search_icon.png" HeightRequest="30" WidthRequest="100" HorizontalOptions="EndAndExpand"/>
+            <ImageButton Source="search_icon.png" 
+                         HeightRequest="30" 
+                         WidthRequest="100" 
+                         HorizontalOptions="EndAndExpand"
+                         Clicked="ImageButton_Clicked"/>
 
         </StackLayout>
         <StackLayout Grid.Row="1"

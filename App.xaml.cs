@@ -5,8 +5,15 @@
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NewPage1();
+            VersionTracking.Track();
+            if(VersionTracking.IsFirstLaunchEver == true)
+            {
+                MainPage = new NewPage1();
+            }
+            else
+            {
+                MainPage = new NewPage1();
+            }
         }
     }
 }
